@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultivo Nativo - Árvores</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0d2c00;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header a {
+            margin: 10px 0 0;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #0d2c00;
+        }
+
+        .tree {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tree:last-child {
+            border-bottom: none;
+        }
+
+        .tree img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .tree-content {
+            max-width: 900px;
+        }
+
+        .tree h3 {
+            margin: 0;
+            color: #0d2c00;
+        }
+
+        .tree p {
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #0d2c00;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .tree {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .tree img {
+                width: 100%;
+                height: auto;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .tree-content {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header a {
+                display: block;
+                margin-top: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .tree h3 {
+                font-size: 1.1rem;
+            }
+
+            .tree p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cultivo Nativo - Árvores</h1>
+        <br>
+        <a href="index.html">Inicio</a>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center;">Informações sobre árvores nativas e como cultivá-las:</h2>
+        <br>
+        <br>
+        <br>
+
+        <div class="tree">
+            <img src="https://mst.org.br/wp-content/uploads/2021/06/Fotos-Valmir-Fernandes-2-01.jpeg" alt="Araucária">
+            <div class="tree-content">
+                <h3>Araucária (Araucaria angustifolia)</h3>
+                <p>
+                    Também conhecida como pinheiro-do-paraná, é uma árvore imponente e característica das florestas subtropicais. Ela prefere locais ensolarados e solos bem drenados, ricos em matéria orgânica, com pH entre 5,5 e 6,5. O plantio pode ser realizado a partir de sementes ou mudas, em buracos de 60 cm, mantendo uma distância de 4 a 6 metros entre as plantas. É importante regar regularmente nas primeiras semanas, adubar na primavera e controlar pragas. Embora seu crescimento seja lento, a Araucária se tornará uma bela árvore, conhecida por seus pinhões comestíveis.
+                </p>
+            </div>
+        </div>
+
+        <div class="tree">
+            <img src="https://cdn.awsli.com.br/600x450/163/163535/produto/30199690/8bada53245.jpg" alt="Ipê-roxo">
+            <div class="tree-content">
+                <h3>Ipê-roxo (Handroanthus heptaphyllus)</h3>
+                <p>
+                    É uma árvore conhecida por suas flores roxas vibrantes que embelezam a paisagem. Para cultivar, escolha um local com bastante luz solar e solo bem drenado, preferencialmente rico em matéria orgânica. O plantio deve ser feito em buracos de 40 cm de profundidade, com uma distância de 4 a 6 metros entre as mudas. Regue regularmente e adube com fertilizantes orgânicos na primavera. O Ipê-roxo atrai polinizadores e proporciona sombra e beleza.
+                </p>
+            </div>
+        </div>
+
+        <div class="tree">
+            <img src="https://greennation.com.br/wp-content/uploads/2019/05/Cedro-Branco-1-1-768x1024.jpg" alt="Cedro">
+            <div class="tree-content">
+                <h3>Cedro (Cedrela fissilis)</h3>
+                <p>
+                    É uma árvore de grande porte valorizada por sua madeira. Escolha um local ensolarado com solo bem drenado e rico em nutrientes. O plantio deve ser feito em buracos de 50 cm de profundidade, com uma distância de 4 a 6 metros entre as mudas. Regue regularmente e aplique adubo orgânico na primavera. O Cedro cresce moderadamente e oferece sombra e contribui para a biodiversidade local.
+                </p>
+            </div>
+        </div>
+
+        <div class="tree">
+            <img src="https://vasoeflor.cdn.magazord.com.br/img/2023/07/produto/1865/angico-capa.jpg?ims=fit-in/800x800/filters:fill(white)" alt="Angico">
+            <div class="tree-content">
+                <h3>Angico (Parapiptadenia rigida) </h3>
+                <p>
+                    É uma árvore nativa apreciada pela qualidade de sua madeira e suas flores, que atraem polinizadores. Para cultivar, escolha um local ensolarado com solo bem drenado e preferencialmente rico em matéria orgânica. O plantio deve ser feito em buracos de cerca de 50 cm de profundidade, mantendo uma distância de 4 a 6 metros entre as mudas. Regue regularmente, especialmente nos primeiros meses após o plantio, e adube com fertilizante orgânico na primavera para promover o crescimento. O Angico possui um crescimento moderado e se adapta bem a diferentes condições de solo, contribuindo para a recuperação de áreas degradadas.
+                </p>
+            </div>
+        </div>
+
+        <div class="tree">
+            <img src="https://brasiliadetodos.com/wp-content/uploads/2019/12/WhatsApp-Image-2019-12-27-at-14.11.17-1009x1024.jpg" alt="Cambui">
+            <div class="tree-content">
+                <h3>Cambuí (Myrcia multiflora) </h3>
+                <p>
+                    É uma pequena árvore nativa conhecida por seus frutos vermelhos, que atraem pássaros e outros animais. Para cultivar, escolha um local que receba sol pleno ou meia-sombra, preferindo solos bem drenados e ricos em matéria orgânica. O plantio deve ser feito em buracos de cerca de 30 cm de profundidade, com uma distância de 3 a 4 metros entre as mudas. Regue regularmente, especialmente nos primeiros meses, e adube com fertilizante orgânico na primavera para estimular o crescimento. O Cambuí é uma planta de crescimento moderado, ideal para áreas de reflorestamento e recuperação de habitats.
+                </p>
+            </div>
+        </div>
+
+        <div class="tree">
+            <img src="https://pimentabueno.sedam.ro.gov.br/wp-content/uploads/2023/07/pitanga3.jpg" alt="Pitanga">
+            <div class="tree-content">
+                <h3>Pitanga (Eugenia uniflora)</h3>
+                <p>
+                    É uma pequena árvore nativa apreciada por seus frutos doces e aromáticos, além de suas folhas decorativas. Para cultivá-la, escolha um local que receba luz solar direta ou meia-sombra, preferindo solos bem drenados e ricos em matéria orgânica. O plantio deve ser feito em buracos de cerca de 30 cm de profundidade, com uma distância de 2 a 3 metros entre as mudas. Regue regularmente, especialmente nos primeiros meses após o plantio, e aplique adubo orgânico na primavera para promover um crescimento saudável. A Pitanga cresce rapidamente e é ideal para jardins, além de atrair aves e polinizadores.
+                </p>
+            </div>
+        </div>
+
+        <div class="tree">
+            <img src="https://mondiniplantas.cdn.magazord.com.br/img/2023/11/produto/3969/canela-doce-arvore.jpg?ims=800x800" alt="Canela">
+            <div class="tree-content">
+                <h3>Canela (Ocotea pulchella)</h3>
+                <p>
+                    É uma árvore de grande porte, conhecida por suas folhas aromáticas e sua madeira de alta qualidade. Para cultivar, escolha um local com sombra parcial e solo bem drenado, rico em matéria orgânica. O plantio deve ser feito em buracos de cerca de 50 cm de profundidade, mantendo uma distância de 5 a 6 metros entre as mudas. Regue regularmente, especialmente nos primeiros meses após o plantio, e adube com fertilizante orgânico na primavera para estimular o crescimento. A Canela é uma espécie de crescimento moderado, ideal para áreas de reflorestamento e recuperação de ecossistemas, além de atrair fauna local.
+                </p>
+            </div>
+        </div>
+
+        <div class="tree">
+            <img src="https://cdn.awsli.com.br/400x400/163/163535/produto/117477200/2d187858ba.jpg" alt="Guabiroba">
+            <div class="tree-content">
+                <h3>Guabiroba (Campomanesia xanthocarpa)</h3>
+                <p>
+                    É uma árvore nativa conhecida por seus pequenos frutos comestíveis e sabor adocicado. Para cultivá-la, escolha um local ensolarado ou com sombra parcial, preferindo solos bem drenados e ricos em matéria orgânica. O plantio deve ser feito em buracos de cerca de 40 cm de profundidade, com uma distância de 4 a 5 metros entre as mudas. Regue regularmente, especialmente durante os primeiros meses, e aplique adubo orgânico na primavera para promover um crescimento saudável. A Guabiroba é uma espécie de crescimento moderado e é excelente para atrair aves e polinizadores, além de contribuir para a biodiversidade local.
+                </p>
+            </div>
+        </div>
+
+        <div class="tree">
+            <img src="https://i.pinimg.com/564x/11/53/40/11534009532baed063a85221288319df.jpg" alt="Figueira">
+            <div class="tree-content">
+                <h3>Figueira (Ficus organensis)</h3>
+                <p>
+                    É uma árvore de grande porte, amplamente reconhecida por sua folhagem exuberante e seus frutos que atraem diversas aves. Para cultivá-la, escolha um local ensolarado ou com sombra parcial, em solo bem drenado e rico em matéria orgânica. O plantio deve ser feito em buracos de cerca de 50 cm de profundidade, mantendo uma distância de 6 a 8 metros entre as mudas para permitir seu crescimento amplo. Regue regularmente, especialmente nos primeiros meses após o plantio, e aplique adubo orgânico na primavera para favorecer o desenvolvimento saudável. A Figueira tem um crescimento moderado e se adapta bem a diferentes condições de solo, sendo uma excelente adição para jardins e áreas de reflorestamento.
+                </p>
+            </div>
+        </div>
+
+        <div class="tree">
+            <img src="https://omeninoquenaomachuca.wordpress.com/wp-content/uploads/2013/02/marica.jpg" alt="Marica">
+            <div class="tree-content">
+                <h3>Maricá (Mimosa bimucronata) </h3>
+                <p>
+                    É um arbusto-arvore nativo conhecido por sua resistência e capacidade de colonizar áreas abertas e degradadas. Para cultivá-la, escolha um local ensolarado, em solo bem drenado, que pode ser pobre em nutrientes. O plantio deve ser feito em buracos de cerca de 30 cm de profundidade, mantendo uma distância de 3 a 4 metros entre as mudas. Regue regularmente, especialmente nos primeiros meses após o plantio, e aplique adubo orgânico se necessário. A Maricá é uma planta de crescimento rápido, ideal para recuperação de áreas degradadas e que contribui para a fixação de nitrogênio no solo, melhorando a fertilidade da terra. Além disso, suas flores atraem polinizadores, enriquecendo a biodiversidade local.
+                </p>
+            </div>
+        </div>
+
+
+        
+    </div>
+
+    
+
+    <footer>
+        O nosso site tem como objetivo auxiliar na conscientização da população para recuperar de maneira mais rápida o solo do nosso estado.
+    </footer>
+
+</body>
+
+</html>

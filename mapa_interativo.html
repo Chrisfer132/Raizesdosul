@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo do Rio Grande do Sul - Plantas</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f5; 
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0d2c00;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 1.5em;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header a {
+            margin: 10px 0 0;
+            color: white;
+        }
+
+
+        h2 {
+            color: #0d2c00; /* Verde mais forte */
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            color: #4d4d4d;
+            font-size: 1.2em;
+        }
+
+        #mapa {
+            width: 90%;
+            height: 600px;
+            margin: 20px auto;
+            border: 5px solid #0d2c00; /* Borda verde escuro */
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Sombra suave no mapa */
+            
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: url('https://img.icons8.com/color/24/000000/tree.png') no-repeat left center;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #3a3a3a;
+        }
+
+        footer {
+            background-color: #0d2c00;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            section {
+                margin: 20px;
+                padding: 30px;
+            }
+
+            ul li {
+                font-size: 1em;
+            }
+
+            #mapa {
+                height: 500px; /* Mapa menor em telas pequenas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+                margin-top: 10px;
+            }
+
+            section {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            ul li {
+                font-size: 0.9em;
+            }
+
+            #mapa {
+                height: 400px; /* Mapa ainda menor para telas de smartphones */
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+
+    <!-- Adicionando a API de Mapas Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Mapa Interativo</h1>
+        <br>
+        <a href="index.html">Inicio</a>
+    </header>
+
+    <!-- Div onde o mapa será inserido -->
+    <div id="mapa"></div>
+
+    <!-- Informações das regiões -->
+    <section>
+        <h2>Região das Serras e Planalto:</h2>
+        <br>
+        <p>Esta região tem clima mais frio e é típica das áreas de Mata de Araucária e Mata Atlântica.</p>
+        <br>
+        <ul>
+            <li><strong>Araucária (Araucaria angustifolia)</strong> - Melhor cultivada em áreas de altitude no Planalto Serrano e Serra Gaúcha.</li>
+            <li><strong>Cedro (Cedrela fissilis)</strong> - Cresce bem nas Serras e Planaltos, onde o clima subtropical e a umidade são ideais.</li>
+            <li><strong>Canela (Ocotea pulchella)</strong> - Encontrada nas áreas de Mata Atlântica e Mata de Araucária.</li>
+            <li><strong>Figueira (Ficus organensis)</strong> - Comum nas áreas de Mata Atlântica e Serra Gaúcha.</li>
+            <li><strong>Cambara (Gochnatia polymorpha)</strong> - Comum nas matas de araucárias da região serrana.</li>
+            <li><strong>Timbó (Enterolobium contortisiliquum)</strong> - Se desenvolve bem em áreas subtropicais.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Região Central e Vale do Rio Pardo</h2>
+        <br>
+        <p>Com clima subtropical, essa região é ideal para espécies que precisam de umidade e calor moderado.</p>
+        <br>
+        <ul>
+            <li><strong>Ipê-roxo (Handroanthus heptaphyllus)</strong> - Cultivada na Região Central e Vale do Rio Pardo.</li>
+            <li><strong>Angico (Parapiptadenia rigida)</strong> - Presente na Região Central e no Vale do Rio Pardo.</li>
+            <li><strong>Cambuí (Myrcia multiflora)</strong> - Adaptada a solos úmidos e climas subtropicais.</li>
+            <li><strong>Guabiju (Myrcianthes pungens)</strong> - Frutífera comum em matas subtropicais.</li>
+            <li><strong>Pessegueiro-bravo (Prunus myrtifolia)</strong> - Comum nas matas ciliares e áreas mais úmidas.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Região da Campanha e Pampa</h2>
+        <br>
+        <p>Esta região tem solos mais pobres e clima seco, características do bioma Pampa.</p>
+        <br>
+        <ul>
+            <li><strong>Maricá (Mimosa bimucronata)</strong> - Ideal para áreas mais secas e degradadas.</li>
+            <li><strong>Guabiroba (Campomanesia xanthocarpa)</strong> - Se adapta bem ao Pampa e à Campanha.</li>
+            <li><strong>Espinilho (Vachellia caven)</strong> - Comum no bioma Pampa, tolera solos pobres e áridos.</li>
+            <li><strong>Coronilha (Scutia buxifolia)</strong> - Característica do Pampa e de áreas secas.</li>
+            <li><strong>Quebracho (Schinopsis brasiliensis)</strong> - Presente em vegetação aberta no Pampa.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Região do Litoral e Baixada Litorânea</h2>
+        <br>
+        <p>Clima quente e úmido, com influência dos ventos marítimos. Árvores precisam resistir à salinidade e ventos fortes.</p>
+        <br>
+        <ul>
+            <li><strong>Pitanga (Eugenia uniflora)</strong> - Comum nas restingas e nas áreas de Mata Atlântica próximas ao litoral.</li>
+            <li><strong>Aroeira (Schinus terebinthifolia)</strong> - Resistente à salinidade e ventos costeiros.</li>
+            <li><strong>Jerivá (Syagrus romanzoffiana)</strong> - Palmeira nativa que tolera a umidade e ventos da costa.</li>
+            <li><strong>Cocão (Erythrina crista-galli)</strong> - Encontra-se em áreas alagadiças e de solos úmidos.</li>
+        </ul>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        O nosso site tem como objetivo auxiliar na conscientização da população para recuperar de maneira mais rápida o solo do nosso estado.
+    </footer>
+
+    <script>
+        // Inicializando o mapa
+        var mapa = L.map('mapa').setView([-30.0346, -51.2177], 7); // Coordenadas do Rio Grande do Sul
+
+        // Definindo o tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(mapa);
+
+        // Adicionando marcadores e popups
+        // Região das Serras e Planalto
+        var serraCaxias = L.marker([-29.1634, -51.1796]).addTo(mapa)
+            .bindPopup("<b>Caxias do Sul</b><br>Araucária, Cedro, Canela.");
+        var serraGramado = L.marker([-29.3747, -50.8764]).addTo(mapa)
+            .bindPopup("<b>Gramado</b><br>Araucária, Figueira, Cambará.");
+        var serraBento = L.marker([-29.1714, -51.5196]).addTo(mapa)
+            .bindPopup("<b>Bento Gonçalves</b><br>Cedro, Figueira, Timbó.");
+
+        // Região Central e Vale do Rio Pardo
+        var centralValeSantaCruz = L.marker([-29.7173, -52.4342]).addTo(mapa)
+            .bindPopup("<b>Santa Cruz do Sul</b><br>Ipê-roxo, Angico, Cambuí.");
+        var centralValeCachoeira = L.marker([-30.0335, -52.8925]).addTo(mapa)
+            .bindPopup("<b>Cachoeira do Sul</b><br>Guabiju, Pessegueiro-bravo.");
+        var centralValeVenancio = L.marker([-29.6146, -52.1912]).addTo(mapa)
+            .bindPopup("<b>Venâncio Aires</b><br>Ipê-roxo, Cambuí.");
+
+        // Região da Campanha e Pampa
+        var campanhaPampaBage = L.marker([-31.3304, -54.1061]).addTo(mapa)
+            .bindPopup("<b>Bagé</b><br>Maricá, Espinilho, Guabiroba.");
+        var campanhaPampaSantana = L.marker([-30.8801, -55.5388]).addTo(mapa)
+            .bindPopup("<b>Santana do Livramento</b><br>Coronilha, Quebracho, Maricá.");
+        var campanhaPampaAlegrete = L.marker([-29.7905, -55.7949]).addTo(mapa)
+            .bindPopup("<b>Alegrete</b><br>Guabiroba, Quebracho, Espinilho.");
+
+        // Região do Litoral e Baixada Litorânea
+        var litoralRioGrande = L.marker([-32.0346, -52.0986]).addTo(mapa)
+            .bindPopup("<b>Rio Grande</b><br>Pitanga, Aroeira, Cocão.");
+        var litoralTorres = L.marker([-29.3342, -49.7273]).addTo(mapa)
+            .bindPopup("<b>Torres</b><br>Jerivá, Aroeira, Pitanga.");
+        var litoralCapao = L.marker([-29.7644, -50.0114]).addTo(mapa)
+            .bindPopup("<b>Capão da Canoa</b><br>Pitanga, Jerivá, Cocão.");
+    </script>
+
+</body>
+</html>

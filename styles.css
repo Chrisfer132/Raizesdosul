@@ -1,0 +1,194 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f2;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #0d2c00;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    
+}
+
+h1 {
+    font-size: 2.0em;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+main {
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #0d2c00;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resources-section {
+    background-color: #eaf4eb;
+    padding: 40px 20px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.icon {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 160px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.icon p {
+    font-weight: 600;
+    margin: 0;
+}
+
+
+
+footer {
+    background-color: #0d2c00;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* Responsividade para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+
+
+    h1 {
+        font-size: 1.8em;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .content {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .icon-container {
+        gap: 20px;
+    }
+
+    .icon {
+        width: 140px;
+        padding: 15px;
+    }
+
+    .icon img {
+        width: 50px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 1.5em;
+        padding: 8px;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .content {
+        padding: 10px;
+        margin: 8px;
+    }
+
+    .icon-container {
+        gap: 10px;
+    }
+
+    .icon {
+        width: 120px;
+        padding: 10px;
+    }
+
+    .icon img {
+        width: 40px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
