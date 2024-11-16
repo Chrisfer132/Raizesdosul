@@ -89,19 +89,19 @@
   function getIconPath(condition) {
     switch (condition.toLowerCase()) {
       case "ensolarado":
-        return "icons/sunny.webp";
+        return "sunny.webp";
       case "nublado":
-        return "icons/cloudy.png";
+        return "cloudy.png";
       case "chuvoso":
-        return "icons/rainy.png";
+        return "rainy.png";
       case "nevoeiro":
-        return "icons/foggy.png";
+        return "foggy.png";
       case "tempestade":
-        return "icons/stormy.png";
+        return "stormy.png";
       case "parcialmente nublado":
-        return "icons/partly_cloudy.png";
+        return "partly_cloudy.png";
       default:
-        return "icons/unknown.png"; // Ícone padrão para condições indefinidas
+        return "unknown.png"; // Ícone padrão para condições indefinidas
     }
   }
 
