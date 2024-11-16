@@ -59,7 +59,7 @@
             message = "Bom para o plantio e ajuste nas mudas !";
             break;
             default:
-            message = "Condição climática indefinida, verifique o tempo!";
+            message = "Está a noite!";
         break;
     }
 
@@ -101,7 +101,7 @@
       case "parcialmente nublado":
         return "partly_cloudy.png";
       default:
-        return "unknown.png"; // Ícone padrão para condições indefinidas
+        return "night.png"; // Ícone padrão para condições indefinidas
     }
   }
 

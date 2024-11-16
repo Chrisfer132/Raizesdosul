@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solos Riograndenses</title>
+    <style>
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #0d2c00;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        header a {
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: #4caf50;
+        }
+
+        /* Conteúdo principal */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #0d2c00;
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .soil-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .soil-box {
+            width: 220px;
+            height: 120px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #4caf50;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+        }
+
+        .soil-box:hover {
+            transform: translateY(-5px);
+            background: #f0f0f0;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Modal */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            z-index: 1001;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal h3 {
+            font-size: 1.5em;
+            color: #4caf50;
+            margin-bottom: 15px;
+        }
+
+        .modal p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .modal ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .modal-close {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background-color: #388e3c;
+        }
+
+        @keyframes moveLetters {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Mostrar Modal */
+        .overlay.active, .modal.active {
+            display: block;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .soil-box {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Solos Riograndenses</h1>
+        <a href="index.html">Início</a>
+    </header>
+    
+    <main>
+        <h2>Tipos de solos e cobertura mais indicada</h2>
+    <section class="container">
+        
+        <div class="soil-container">
+            <div class="soil-box" onclick="openModal('Solo Novo', 'Solos jovens, rasos e arenosos, com baixa retenção de água e nutrientes.', ['Butiá (Butia capitata): Resistente a solos arenosos e secos.', 'Gravatá (Bromelia antiacantha): Comum em áreas de solos arenosos e bem drenados.'])">Solo Novo</div>
+            <div class="soil-box" onclick="openModal('Terra de Cascalho', 'Solos jovens, com presença de pedras e moderada fertilidade.', ['Pitanga (Eugenia uniflora): Resiste bem a solos pedregosos.', 'Aroeira (Schinus molle): Tolerante e ideal para áreas de relevo acidentado.'])">Terra de Cascalho</div>
+            <div class="soil-box" onclick="openModal('Terra Preta ou de Campo', 'Solos escuros, ricos em matéria orgânica e de alta fertilidade.', ['Erva-mate (Ilex paraguariensis): Cresce bem em solos férteis e bem drenados.', 'Figueira (Ficus luschnathiana): Ideal para solos ricos em nutrientes.'])">Terra Preta ou de Campo</div>
+            <div class="soil-box" onclick="openModal('Terra Alagada ou Solo de Várzea', 'Solos úmidos ou encharcados, com drenagem deficiente.', ['Timbó (Ateleia glazioviana): Adapta-se bem a áreas alagadiças.', 'Samambaiaçu (Alsophila spp.): Cresce em solos úmidos e margens de rios.'])">Terra Alagada ou Solo de Várzea</div>
+            <div class="soil-box" onclick="openModal('Solo Compactado', 'Solos com baixa permeabilidade, muitas vezes compactados.', ['Capim-mimoso (Axonopus compressus): Resistente e usado para pastagens.', 'Ipê-amarelo (Handroanthus albus): Pode crescer em solos compactados com baixa drenagem.'])">Solo Compactado</div>
+            <div class="soil-box" onclick="openModal('Terra de Banhado', 'Ricos em matéria orgânica, encontrados em áreas de banhado ou úmidas.', ['Junco (Juncus spp.): Adaptado a solos orgânicos e úmidos.', 'Taquara (Guadua trinii): Cresce bem em áreas alagadas com solo orgânico.'])">Terra de Banhado</div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="overlay" onclick="closeModal()"></div>
+    <div class="modal" id="modal">
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <ul id="modal-list"></ul>
+        <button class="modal-close" onclick="closeModal()">Fechar</button>
+    </div>
+
+    <script>
+        function openModal(title, description, list) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-description').textContent = description;
+
+            const modalList = document.getElementById('modal-list');
+            modalList.innerHTML = ''; // Limpar lista anterior
+            list.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                modalList.appendChild(li);
+            });
+
+            document.getElementById('modal').classList.add('active');
+            document.querySelector('.overlay').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>
