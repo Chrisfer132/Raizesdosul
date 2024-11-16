@@ -1,6 +1,6 @@
   // Substitua pela sua API Key do WeatherAPI
   const API_KEY = "2401b9f9d39744ffb53182901241611";
-  const CITY = "Porto Alegre"; // Substitua pela cidade desejada
+  const CITY = "Cristal do Sul,RS"; // Substitua pela cidade desejada
 
   async function fetchWeather() {
     const response = await fetch(
