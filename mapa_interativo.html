@@ -213,6 +213,28 @@
         </ul>
     </section>
 
+    <section>
+        <h2>Região Metropolitana e Áreas de Planície Alagável:</h2>
+        <br>
+        <p>Esta região é caracterizada por terrenos planos, com solos aluviais e áreas sujeitas a alagamentos sazonais. O clima é subtropical úmido, e a vegetação predominante inclui várzeas e florestas de galeria.
+        </p>
+        <br>
+        <ul>
+            <li><strong>Salgueiro (Salix humboldtiana)</strong> - Ideal para margens de rios e várzeas, ajudando a controlar a erosão e estabilizar o solo.
+            </li>
+            <li><strong>Ingá (Inga edulis)</strong> - Fixadora de nitrogênio, melhora a fertilidade do solo em áreas úmidas.
+            </li>
+            <li><strong>Figueira-brava (Ficus insipida)</strong> - Árvore ribeirinha que contribui para a recuperação de áreas alagadas.
+            </li>
+            <li><strong>Chal-chal (Allophylus edulis)</strong> - Adaptável a solos úmidos, ótimo para regeneração ecológica.
+            </li>
+            <li><strong>Canafístula (Peltophorum dubium)</strong> - Boa para solos temporariamente encharcados, ajuda na recuperação ambiental.
+            </li>
+            <li><strong>Tarumã (Vitex megapotamica)</strong> - Comum em áreas de várzea, contribui para a estabilização de terrenos inundáveis.
+            </li>
+        </ul>
+    </section>
+
     <!-- Rodapé -->
     <footer>
         O nosso site tem como objetivo auxiliar na conscientização da população para recuperar de maneira mais rápida o solo do nosso estado.
@@ -228,37 +250,42 @@
         }).addTo(mapa);
 
         // Adicionando marcadores e popups
-        // Região das Serras e Planalto
-        var serraCaxias = L.marker([-29.1634, -51.1796]).addTo(mapa)
-            .bindPopup("<b>Caxias do Sul</b><br>Araucária, Cedro, Canela.");
-        var serraGramado = L.marker([-29.3747, -50.8764]).addTo(mapa)
-            .bindPopup("<b>Gramado</b><br>Araucária, Figueira, Cambará.");
-        var serraBento = L.marker([-29.1714, -51.5196]).addTo(mapa)
-            .bindPopup("<b>Bento Gonçalves</b><br>Cedro, Figueira, Timbó.");
+    // Região das Serras e Planalto
+    var serraCaxias = L.marker([-29.1634, -51.1796]).addTo(mapa)
+        .bindPopup("<b>Caxias do Sul</b><br>Araucária, Cedro, Canela.");
+    var serraGramado = L.marker([-29.3747, -50.8764]).addTo(mapa)
+        .bindPopup("<b>Gramado</b><br>Araucária, Figueira, Cambará.");
+    var serraBento = L.marker([-29.1714, -51.5196]).addTo(mapa)
+        .bindPopup("<b>Bento Gonçalves</b><br>Cedro, Figueira, Timbó.");
 
-        // Região Central e Vale do Rio Pardo
-        var centralValeSantaCruz = L.marker([-29.7173, -52.4342]).addTo(mapa)
-            .bindPopup("<b>Santa Cruz do Sul</b><br>Ipê-roxo, Angico, Cambuí.");
-        var centralValeCachoeira = L.marker([-30.0335, -52.8925]).addTo(mapa)
-            .bindPopup("<b>Cachoeira do Sul</b><br>Guabiju, Pessegueiro-bravo.");
-        var centralValeVenancio = L.marker([-29.6146, -52.1912]).addTo(mapa)
-            .bindPopup("<b>Venâncio Aires</b><br>Ipê-roxo, Cambuí.");
+    // Região Central e Vale do Rio Pardo
+    var centralValeSantaCruz = L.marker([-29.7173, -52.4342]).addTo(mapa)
+        .bindPopup("<b>Santa Cruz do Sul</b><br>Ipê-roxo, Angico, Cambuí.");
+    var centralValeCachoeira = L.marker([-30.0335, -52.8925]).addTo(mapa)
+        .bindPopup("<b>Cachoeira do Sul</b><br>Guabiju, Pessegueiro-bravo.");
+    var centralValeVenancio = L.marker([-29.6146, -52.1912]).addTo(mapa)
+        .bindPopup("<b>Venâncio Aires</b><br>Ipê-roxo, Cambuí.");
 
-        // Região da Campanha e Pampa
-        var campanhaPampaBage = L.marker([-31.3304, -54.1061]).addTo(mapa)
-            .bindPopup("<b>Bagé</b><br>Maricá, Espinilho, Guabiroba.");
-        var campanhaPampaSantana = L.marker([-30.8801, -55.5388]).addTo(mapa)
-            .bindPopup("<b>Santana do Livramento</b><br>Coronilha, Quebracho, Maricá.");
-        var campanhaPampaAlegrete = L.marker([-29.7905, -55.7949]).addTo(mapa)
-            .bindPopup("<b>Alegrete</b><br>Guabiroba, Quebracho, Espinilho.");
+    // Região da Campanha e Pampa
+    var campanhaPampaBage = L.marker([-31.3304, -54.1061]).addTo(mapa)
+        .bindPopup("<b>Bagé</b><br>Maricá, Espinilho, Guabiroba.");
+    var campanhaPampaSantana = L.marker([-30.8801, -55.5388]).addTo(mapa)
+        .bindPopup("<b>Santana do Livramento</b><br>Coronilha, Quebracho, Maricá.");
+    var campanhaPampaAlegrete = L.marker([-29.7905, -55.7949]).addTo(mapa)
+        .bindPopup("<b>Alegrete</b><br>Guabiroba, Quebracho, Espinilho.");
 
-        // Região do Litoral e Baixada Litorânea
-        var litoralRioGrande = L.marker([-32.0346, -52.0986]).addTo(mapa)
-            .bindPopup("<b>Rio Grande</b><br>Pitanga, Aroeira, Cocão.");
-        var litoralTorres = L.marker([-29.3342, -49.7273]).addTo(mapa)
-            .bindPopup("<b>Torres</b><br>Jerivá, Aroeira, Pitanga.");
-        var litoralCapao = L.marker([-29.7644, -50.0114]).addTo(mapa)
-            .bindPopup("<b>Capão da Canoa</b><br>Pitanga, Jerivá, Cocão.");
+    // Região do Litoral e Baixada Litorânea
+    var litoralRioGrande = L.marker([-32.0346, -52.0986]).addTo(mapa)
+        .bindPopup("<b>Rio Grande</b><br>Pitanga, Aroeira, Cocão.");
+    var litoralTorres = L.marker([-29.3342, -49.7273]).addTo(mapa)
+        .bindPopup("<b>Torres</b><br>Jerivá, Aroeira, Pitanga.");
+    var litoralCapao = L.marker([-29.7644, -50.0114]).addTo(mapa)
+        .bindPopup("<b>Capão da Canoa</b><br>Pitanga, Jerivá, Cocão.");
+
+    // Adicionando Porto Alegre
+    var portoAlegre = L.marker([-30.0277, -51.2287]).addTo(mapa)
+        .bindPopup("<b>Porto Alegre</b><br>Salgueiro, Ingá, Figueira-brava, Chal-chal, Canafístula, Tarumã.");
+
     </script>
 
 </body>
