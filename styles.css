@@ -4,6 +4,48 @@
     padding: 0;
 }
 
+/* Estilização da seção Curiosidade do Dia */
+.curiosidade-dia {
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f8f8; /* Cor de fundo suave */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 600px;
+}
+
+.curiosidade-dia h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333; /* Cor do título */
+    margin-bottom: 20px;
+}
+
+.curiosidade-card {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre o ícone e o texto */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para o cartão */
+    font-family: 'Poppins', sans-serif;
+}
+
+.curiosidade-icon {
+    width: 40px; /* Tamanho do ícone */
+    height: 40px;
+}
+
+#curiosidade-texto {
+    font-size: 16px;
+    color: #555; /* Cor do texto */
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
 #temperature-container {
     display: flex;
     align-items: center; /* Centraliza verticalmente */
