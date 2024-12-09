@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Raízes do Sul</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0d2c00;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 1.5em;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header a {
+            margin: 10px 0 0;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #0d2c00;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            margin-left: 20px;
+        }
+        .answers label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #0d2c00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #2e8b57;
+        }
+        .results {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #2e8b57;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Quiz Interativo</h1>
+        <br>
+        <a href="index.html">Inicio</a>
+    </header>
+
+    <div class="container">
+        <form id="quizForm">
+            <h2 style="text-align: center;">Perguntas de Múltipla Escolha</h2>
+            <br>
+
+            <!-- Perguntas de múltipla escolha -->
+            <div class="question">
+                <p>1. Qual evento motivou o projeto Raízes do Sul?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q1" value="a"> a) Incêndios florestais</label>
+                    <label><input type="radio" name="q1" value="b"> b) Enchentes de maio de 2024</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Qual é o principal objetivo do projeto?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q2" value="a"> a) Restaurar solos afetados pelas enchentes no RS</label>
+                    <label><input type="radio" name="q2" value="b"> b) Produzir alimentos orgânicos</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. O que é destacado na página inicial sobre o impacto das enchentes?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q3" value="a"> a) A perda de biodiversidade</label>
+                    <label><input type="radio" name="q3" value="b"> b) O prejuízo de R$ 6 bilhões em solos e nutrientes</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Qual funcionalidade do site facilita a escolha de vegetações?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q4" value="a"> a) Mapa interativo</label>
+                    <label><input type="radio" name="q4" value="b"> b) Fórum de discussão</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. Quais são os nomes dos criadores do projeto?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q5" value="a"> a) Djalma, Isadora e Poliana</label>
+                    <label><input type="radio" name="q5" value="b"> b) João, Maria e Ana</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. Qual é uma das categorias principais destacadas no site?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q6" value="a"> a) Soluções para restauração</label>
+                    <label><input type="radio" name="q6" value="b"> b) Impactos do desmatamento</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. Qual prática agrícola sustentável é incentivada pelo projeto?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q7" value="a"> a) Uso de adubação verde</label>
+                    <label><input type="radio" name="q7" value="b"> b) Irrigação artificial intensiva</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. O que o mapa interativo apresenta?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q8" value="a"> a) Áreas afetadas pelas enchentes</label>
+                    <label><input type="radio" name="q8" value="b"> b) Reservas indígenas no estado</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. Qual dica pode aparecer na seção 'Clima e Solo Hoje' em dias chuvosos?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q9" value="a"> a) 'Proteja o solo para evitar ressecamento'</label>
+                    <label><input type="radio" name="q9" value="b"> b) 'Ótima umidade para novas mudas!'</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. Como o projeto foi apresentado ao público?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q10" value="a"> a) Em uma Mostra Científica da Seduc-RS</label>
+                    <label><input type="radio" name="q10" value="b"> b) Em um Congresso Internacional de Ecologia</label>
+                </div>
+            </div>
+            <br>
+            <h2 style="text-align: center;">Perguntas de Verdadeiro ou Falso</h2>
+            <br>
+
+            <!-- Perguntas de Verdadeiro ou Falso -->
+            <div class="question">
+                <p>1. O banco de sementes do projeto Raízes do Sul foi feito para facilitar o transporte entre diferentes regiões.</p>
+                <div class="answers">
+                    <label><input type="radio" name="q11" value="true"> Verdadeiro</label>
+                    <label><input type="radio" name="q11" value="false"> Falso</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. O banco de sementes pode ser armazenado em qualquer local, sem necessidade de controle de temperatura.</p>
+                <div class="answers">
+                    <label><input type="radio" name="q12" value="true"> Verdadeiro</label>
+                    <label><input type="radio" name="q12" value="false"> Falso</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. As sementes do banco foram coletadas de plantas adaptadas ao clima e solo locais.</p>
+                <div class="answers">
+                    <label><input type="radio" name="q13" value="true"> Verdadeiro</label>
+                    <label><input type="radio" name="q13" value="false"> Falso</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. O projeto utiliza sementes geneticamente modificadas para restaurar os solos afetados.</p>
+                <div class="answers">
+                    <label><input type="radio" name="q14" value="true"> Verdadeiro</label>
+                    <label><input type="radio" name="q14" value="false"> Falso</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. A seção 'Clima e Solo Hoje' foi projetada para mostrar imagens das áreas afetadas pelas enchentes.</p>
+                <div class="answers">
+                    <label><input type="radio" name="q15" value="true"> Verdadeiro</label>
+                    <label><input type="radio" name="q15" value="false"> Falso</label>
+                </div>
+            </div>
+            <br>
+
+            <!-- Mais perguntas aqui -->
+
+            <button type="button" class="submit-btn" onclick="checkAnswers()">Enviar Respostas</button>
+        </form>
+        <div id="results" class="results"></div>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "b", q2: "a", q3: "b", q4: "a", q5: "a", q6: "a", q7: "a", q8: "a", q9: "b", q10: "a",
+            q11: "true", q12: "false", q13: "true", q14: "false", q15: "false",
+        };
+
+        function checkAnswers() {
+            const form = document.getElementById("quizForm");
+            const results = document.getElementById("results");
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+
+            for (const question in correctAnswers) {
+                const userAnswer = form[question].value;
+                if (userAnswer === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            results.innerHTML = `Você acertou ${score} de ${totalQuestions} perguntas!`;
+        }
+    </script>
+</body>
+</html>
